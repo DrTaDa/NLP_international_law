@@ -1,0 +1,6 @@
+numpy>=1.6
+joblib
+nltk
+pdfminer
+bs4
+matplotlib

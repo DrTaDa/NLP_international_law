@@ -1,0 +1,15 @@
+keywords = [
+    "non-intervention",
+    "non-interference",
+    "matters which are essentially within the domestic jurisdiction",
+    "interfere in matters within the domestic jurisdiction",
+    "interfere in the domestic affairs",
+    "interfere in the internal affairs",
+    "interfere in domestic affairs",
+    "interfere in internal affairs",
+    "intervene in matters within the domestic jurisdiction",
+    "interfere in the domestic affairs",
+    "intervene in the internal affairs",
+    "intervene in domestic affairs",
+    "intervene in internal affairs",
+]

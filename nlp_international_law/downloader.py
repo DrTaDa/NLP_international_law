@@ -1,12 +1,11 @@
 import re
-import json
 import pathlib
-
 from bs4 import BeautifulSoup
-
 from pdfminer.high_level import extract_text
 
-from unspider import UNSpider
+from nlp_international_law.unspider import UNSpider
+from nlp_international_law.keywords import keywords
+from nlp_international_law.un_document import UNDocument
 
 
 def parse_un_page(page_html):
@@ -51,13 +50,15 @@ def parse_un_page(page_html):
     return paper_list
 
 
-def download_document_and_title(start_date, end_date, keyword, page_count=25):
+def download_document_and_title(
+    start_date, end_date, keyword, page_count=25, output_dir="./data/"
+):
 
     s = UNSpider(start_date, end_date)
     s.init_cookies()
 
-    output_dir = pathlib.Path("./{}/".format(keyword))
-    output_dir.mkdir(parents=True, exist_ok=True)
+    out_dir = pathlib.Path("{}/{}/".format(output_dir, keyword))
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     docs = []
 
@@ -90,9 +91,6 @@ def download_document_and_title(start_date, end_date, keyword, page_count=25):
                     file_name = "unkownfile.bin"
 
                 save_file_path = output_dir / file_name
-                # if save_file_path.is_file():
-                #    print("file {} already exist".format(save_file_path))
-                #    continue
 
                 print("downloading from {}".format(f["url"]))
                 r = s.download(f["url"])
@@ -103,53 +101,22 @@ def download_document_and_title(start_date, end_date, keyword, page_count=25):
                         print(f"Path: {save_file_path}")
                         fp.write(r.content)
 
-                if save_file_path.is_file():
-                    print("Downloaded successfully")
-                else:
-                    print("Downloading error")
+                content = extract_text(
+                    str(save_file_path.with_suffix(".pdf"))
+                )
 
-                try:
-                    content = extract_text(
-                        str(save_file_path.with_suffix(".pdf"))
-                    )
-
-                    save_metadata_path = save_file_path.with_suffix(".json")
-
-                    metadata = {
-                        "pdf_name": save_file_path.name,
-                        "year": start_date[:4],
-                        "subject": d["subject"],
-                        "pdf_title": d["title"],
-                        "content": content,
-                    }
-
-                    with open(str(save_metadata_path), "w+") as fp:
-                        json.dump(metadata, fp, indent=2)
-
-                except:
-                    pass
+                doc = UNDocument(
+                    path_pdf=save_file_path,
+                    title=d["title"],
+                    year=start_date[:4],
+                    subjects=d["subject"],
+                    content=content
+                )
+                doc.save(out_dir)
 
 
 if __name__ == "__main__":
-
-    keywords = [
-        "non-intervention",
-        "non-interference",
-        "matters which are essentially within the domestic jurisdiction",
-        "interfere in matters within the domestic jurisdiction",
-        "interfere in the domestic affairs",
-        "interfere in the internal affairs",
-        "interfere in domestic affairs",
-        "interfere in internal affairs",
-        "intervene in matters within the domestic jurisdiction",
-        "interfere in the domestic affairs",
-        "intervene in the internal affairs",
-        "intervene in domestic affairs",
-        "intervene in internal affairs",
-    ]
-
     for keyword in keywords:
-
         for year in range(1945, 2020):
             print("\n\n ######   {}: YEAR is {}  ###### \n\n".format(keyword, year))
             start_date = "{}-01-01".format(year)

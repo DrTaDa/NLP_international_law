@@ -1,0 +1,9 @@
+AUTHORS.txt
+LICENSE
+README.md
+setup.py
+nlp_international_law.egg-info/PKG-INFO
+nlp_international_law.egg-info/SOURCES.txt
+nlp_international_law.egg-info/dependency_links.txt
+nlp_international_law.egg-info/requires.txt
+nlp_international_law.egg-info/top_level.txt
