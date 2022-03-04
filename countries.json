@@ -45,8 +45,8 @@
         "num_code": "28",
         "alpha_2_code": "AG",
         "alpha_3_code": "ATG",
-        "en_short_name": "Antigua and Barbuda",
-        "nationality": "Antiguan or Barbudan"
+        "en_short_name": "Antigua Barbuda",
+        "nationality": "Antiguan Barbudan"
     },
     {
         "num_code": "32",
@@ -123,6 +123,7 @@
         "alpha_2_code": "BY",
         "alpha_3_code": "BLR",
         "en_short_name": "Belarus",
+        "en_short_name1": "Byelorussian Soviet Socialist Republic",
         "nationality": "Belarusian"
     },
     {
@@ -171,7 +172,8 @@
         "num_code": "70",
         "alpha_2_code": "BA",
         "alpha_3_code": "BIH",
-        "en_short_name": "Bosnia and Herzegovina",
+        "en_short_name": "Bosnia Herzegovina",
+        "en_short_name1": "Yugoslavia",
         "nationality": "Bosnian or Herzegovinian"
     },
     {
@@ -208,6 +210,14 @@
         "alpha_3_code": "BDI",
         "en_short_name": "Burundi",
         "nationality": "Burundian"
+    },
+    {
+        "num_code": "854",
+        "alpha_2_code": "BF",
+        "alpha_3_code": "BFA",
+        "en_short_name": "Burkina Faso",
+        "en_short_name1": "Republic Upper Volta",
+        "nationality": "Burkinab\u00e9"
     },
     {
         "num_code": "132",
@@ -291,15 +301,16 @@
         "num_code": "178",
         "alpha_2_code": "CG",
         "alpha_3_code": "COG",
-        "en_short_name": "Republic of the Congo",
+        "en_short_name": "Republic Congo",
         "nationality": "Congolese"
     },
     {
         "num_code": "180",
         "alpha_2_code": "CD",
         "alpha_3_code": "COD",
-        "en_short_name": "Democratic Republic of the Congo",
+        "en_short_name": "Democratic Republic Congo",
         "en_short_name1": "DRC",
+        "en_short_name2": "Zaire",
         "nationality": "Congolese"
     },
     {
@@ -485,6 +496,8 @@
         "alpha_2_code": "DE",
         "alpha_3_code": "DEU",
         "en_short_name": "Germany",
+        "en_short_name1": "German Democratic Republic",
+        "en_short_name2": "Federal Republic Germany",
         "nationality": "German"
     },
     {
@@ -562,6 +575,7 @@
         "alpha_2_code": "VA",
         "alpha_3_code": "VAT",
         "en_short_name": "Vatican",
+        "en_short_name1": "Holy See",
         "nationality": "Vatican"
     },
     {
@@ -604,6 +618,7 @@
         "alpha_2_code": "IR",
         "alpha_3_code": "IRN",
         "en_short_name": "Iran",
+        "en_short_name2": "Persia",
         "nationality": "Iranian, Persian"
     },
     {
@@ -680,7 +695,7 @@
         "num_code": "408",
         "alpha_2_code": "KP",
         "alpha_3_code": "PRK",
-        "en_short_name": "Democratic People's Republic of Korea",
+        "en_short_name": "Democratic People Republic Korea",
         "en_short_name1": "DPRK",
         "nationality": "North Korean"
     },
@@ -688,7 +703,7 @@
         "num_code": "410",
         "alpha_2_code": "KR",
         "alpha_3_code": "KOR",
-        "en_short_name": "Republic of Korea",
+        "en_short_name": "Republic Korea",
         "nationality": "South Korean"
     },
     {
@@ -746,6 +761,7 @@
         "alpha_2_code": "LY",
         "alpha_3_code": "LBY",
         "en_short_name": "Libya",
+        "en_short_name": "Libyan Arab Jamahiriya",
         "nationality": "Libyan"
     },
     {
@@ -795,6 +811,7 @@
         "alpha_2_code": "MY",
         "alpha_3_code": "MYS",
         "en_short_name": "Malaysia",
+        "en_short_name1": "Malaya",
         "nationality": "Malaysian"
     },
     {
@@ -908,6 +925,7 @@
         "alpha_2_code": "NA",
         "alpha_3_code": "NAM",
         "en_short_name": "Namibia",
+        "en_short_name1": "South West Africa",
         "nationality": "Namibian"
     },
     {
@@ -1077,15 +1095,9 @@
         "alpha_3_code": "RUS",
         "en_short_name": "Russian Federation",
         "en_short_name1": "Russia",
-        "nationality": "Russian"
-    },
-    {
-        "num_code": "643",
-        "alpha_2_code": "RU",
-        "alpha_3_code": "RUS",
-        "en_short_name": "Soviet Union",
-        "en_short_name1": "Union of Soviet Socialist Republics",
-        "en_short_name2": "USSR",
+        "en_short_name2": "Soviet Union",
+        "en_short_name3": "Union Soviet Socialist Republics",
+        "en_short_name4": "USSR",
         "nationality": "Russian"
     },
     {
@@ -1106,7 +1118,7 @@
         "num_code": "670",
         "alpha_2_code": "VC",
         "alpha_3_code": "VCT",
-        "en_short_name": "Saint Vincent and the Grenadines",
+        "en_short_name": "Saint Vincent Grenadines",
         "nationality": "Saint Vincentian, Vincentian"
     },
     {
@@ -1247,7 +1259,7 @@
         "num_code": "744",
         "alpha_2_code": "SJ",
         "alpha_3_code": "SJM",
-        "en_short_name": "Svalbard and Jan Mayen",
+        "en_short_name": "Svalbard Jan Mayen",
         "nationality": "Svalbard"
     },
     {
@@ -1299,6 +1311,7 @@
         "alpha_2_code": "TH",
         "alpha_3_code": "THA",
         "en_short_name": "Thailand",
+        "en_short_name1": "Siam",
         "nationality": "Thai"
     },
     {
@@ -1335,8 +1348,8 @@
         "num_code": "780",
         "alpha_2_code": "TT",
         "alpha_3_code": "TTO",
-        "en_short_name": "Trinidad and Tobago",
-        "nationality": "Trinidadian or Tobagonian"
+        "en_short_name": "Trinidad Tobago",
+        "nationality": "Trinidadian Tobagonian"
     },
     {
         "num_code": "788",
@@ -1378,6 +1391,7 @@
         "alpha_2_code": "UA",
         "alpha_3_code": "UKR",
         "en_short_name": "Ukraine",
+        "en_short_name1": "Ukrainian Soviet Socialist Republic",
         "nationality": "Ukrainian"
     },
     {
@@ -1391,7 +1405,7 @@
         "num_code": "826",
         "alpha_2_code": "GB",
         "alpha_3_code": "GBR",
-        "en_short_name": "United Kingdom of Great Britain and Northern Ireland",
+        "en_short_name": "United Kingdom Great Britain Northern Ireland",
         "en_short_name1": "United Kingdom",
         "nationality": "British, UK"
     },
@@ -1399,7 +1413,7 @@
         "num_code": "840",
         "alpha_2_code": "US",
         "alpha_3_code": "USA",
-        "en_short_name": "United States of America",
+        "en_short_name": "United States America",
         "en_short_name1": "United States",
         "nationality": "the American"
     },
@@ -1437,6 +1451,7 @@
         "alpha_3_code": "VNM",
         "en_short_name": "Viet Nam",
         "en_short_name1": "Vietnam",
+        "en_short_name2": "Saigon",
         "nationality": "Vietnamese"
     },
     {

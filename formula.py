@@ -16,10 +16,10 @@ formula_intervention_interference = {
         'external affairs': {
             '', 'internal or external affairs'
         },
-        'article 2, paragaraph 7': {
-            '', 'article 2 paragraph 7', 'charter'
+        'article 2 paragraph 7': {
+            '', 'charter'
         },
-        'article 2.7': {
+        'article 2 7': {
             '', 'charter'
         },
         'principles': {
@@ -63,29 +63,29 @@ formula_intervention_interference = {
             '', 'civil strife', 'civil war', 'national identity', 'inalienable'
         },
         'force': {
-            'use of force', 'article 2.4', 'article 2, paragraph 4', 'article 2 paragraph 4', 'forcible', 'armed intervention', 'armed attack', 
+            'use of force', 'article 2 4', 'article 2 paragraph 4', 'forcible', 'armed intervention', 'armed attack',
             'invasion', 'occupation', 'military', 'armed', 'attack', 'war', 'bombardment'
         },
         'sovereignty': {
             '', 'sovereign equality', 'territorial integrity', 'political independence', 'independence', 'national unity'
         },
         'aggress': {
-            'aggression', 'aggressive', 'crime against peace', 'united action for peace', '3314', 'question of defining aggression', 
-            'definition of aggression', 'article 2.4', 'article 2, paragraph 4', 'article 2 paragraph 4','invasion', 'bombardment', 
+            'aggression', 'aggressive', 'crime against peace', '3314',
+            'article paragraph','invasion', 'bombardment', 
             'occupation', 'military', 'armed force', 'blockade', 'armed attack', 'attack', 'armed', 'bands', 'groups', 'irregulars', 'mercenaries', 
             'substantial involvement', 'gravity', 'collective self-defence'
         },
         'peace': {
-            '', 'maintenance of international peace', 'peace and security', 'security'
+            '', 'peace and security', 'security'
         }, 
-        'self-determination': {
-            '', 'inalienable'
-        },
         'human rights': {
             ''
         },
         'Peaceful coexistence': {
             ''
+        },
+        'selfdetermination': {
+            '', 'outer intervention'
         },
         'humanitarian intervention': {
             '', 'responsibility to protect'
@@ -107,10 +107,10 @@ formula_intervention_interference = {
         'external affairs': {
             '', 'internal or external affairs'
         },
-        'article 2, paragaraph 7': {
-            '', 'article 2 paragraph 7', 'charter'
+        'article 2 paragraph 7': {
+            '', 'charter'
         },
-        'article 2.7': {
+        'article 2 7': {
             '', 'charter'
         },
         'principles': {
@@ -126,7 +126,7 @@ formula_intervention_interference = {
             '', '2625', 'principles of international law', 'friendly relations and co-operation'
         },
         'direct': {
-            '', 'indirect'
+            '', 'indirect', 'right to interfere'
         },
         'political': {
             '', 'political interference', 'inalienable', 'choose'
@@ -151,41 +151,32 @@ formula_intervention_interference = {
             '', 'civil strife', 'civil war', 'national identity', 'inalienable'
         },
         'force': {
-            'use of force', 'article 2.4', 'article 2, paragraph 4', 'article 2 paragraph 4', 'forcible', 'armed intervention', 'armed attack', 
+            'use of force', 'article 2 4', 'article 2 paragraph 4', 'forcible', 'armed intervention', 'armed attack',
             'invasion', 'occupation', 'military', 'armed', 'attack', 'war', 'bombardment'
         },
         'sovereignty': {
             '', 'sovereign equality', 'territorial integrity', 'political independence', 'independence', 'national unity'
         },
         'aggress': {
-            'aggression', 'aggressive', 'crime against peace', 'united action for peace', '3314', 'question of defining aggression', 
-            'definition of aggression', 'article 2.4', 'article 2, paragraph 4', 'article 2 paragraph 4','invasion', 'bombardment', 
+            'aggression', 'aggressive', 'crime against peace', '3314',
+            'article paragraph','invasion', 'bombardment', 
             'occupation', 'military', 'armed force', 'blockade', 'armed attack', 'attack', 'armed', 'bands', 'groups', 'irregulars', 'mercenaries', 
-            'substantial involvement', 'gravity'
+            'substantial involvement', 'gravity', 'collective self-defence'
         },
         'peace': {
-            '', 'maintenance of international peace', 'peace and security', 'security'
+            '', 'peace and security', 'security'
         }, 
-        'self-determination': {
-            '', 'inalienable'
-        },
         'human rights': {
             ''
         },
         'Peaceful coexistence': {
             ''
         },
+        'selfdetermination': {
+            '', 'outer interference'
+        },
         'humanitarian intervention': {
             '', 'responsibility to protect'
         }
     }
 }
-
-
-
-
-
-
-
-
-

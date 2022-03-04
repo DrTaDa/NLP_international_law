@@ -13,12 +13,16 @@ def parse_un_page(page_html):
 
     soup = BeautifulSoup(page_html, "html.parser")
     title_spans = soup.find_all("span", id=re.compile("cfTitle"))
+    subject_spans = soup.find_all("span", id=re.compile("cfSubjs"))
 
     paper_list = []
 
-    for t in title_spans:
+    for t, s in (title_spans, subject_spans):
 
-        paper = {"title": t.get_text(), "files": []}
+        paper = {"title": t.get_text(),
+                 "subject": s.get_text(),
+                 "files": []
+        }
 
         detail_id = t["id"].replace("cfTitle", "details1")
         detail_div = soup.find("div", id=detail_id)
@@ -77,7 +81,7 @@ def download_document_and_title(start_date, end_date, keyword, page_count=25):
 
         for f in d["files"]:
 
-            if f["lan"] == "英文":
+            if f["lan"] == "ENGLISH":
 
                 sr = re.search(r"/\w+.\w+\?", f["url"])
                 if not(sr is None):
@@ -114,6 +118,7 @@ def download_document_and_title(start_date, end_date, keyword, page_count=25):
                     metadata = {
                         "pdf_name": save_file_path.name,
                         "year": start_date[:4],
+                        "subject": d["subject"],
                         "pdf_title": d["title"],
                         "content": content,
                     }
@@ -142,11 +147,25 @@ if __name__ == "__main__":
     # interfere in the internal affairs missing some of year 1987
     # intervene in the internal affairs missing some of year 1971
 
-    keywords = ["intervene in the internal affairs"]
+    keywords = [
+        "non-intervention",
+        "non-interference",
+        "matters which are essentially within the domestic jurisdiction",
+        "interfere in matters within the domestic jurisdiction",
+        "interfere in the domestic affairs",
+        "interfere in the internal affairs",
+        "interfere in domestic affairs",
+        "interfere in internal affairs",
+        "intervene in matters within the domestic jurisdiction",
+        "interfere in the domestic affairs",
+        "intervene in the internal affairs",
+        "intervene in domestic affairs",
+        "intervene in internal affairs",
+    ]
 
     for keyword in keywords:
 
-        for year in range(1972, 2020):
+        for year in range(1945, 2020):
             print("\n\n ######   {}: YEAR is {}  ###### \n\n".format(keyword, year))
             start_date = "{}-01-01".format(year)
             end_date = "{}-12-31".format(year)
