@@ -132,21 +132,6 @@ def download_document_and_title(start_date, end_date, keyword, page_count=25):
 
 if __name__ == "__main__":
 
-    """keywords = [
-        "non-intervention",
-        "non-interference",
-        "interfere in matters within domestic jurisdictions",
-        "interfere in the domestic affairs",
-        "interfere in the internal affairs",
-        "intervene in matters within domestic jurisdictions",
-        "intervene in the domestic affairs",
-        "intervene in the internal affairs",
-    ]"""
-
-    # "non-interference" missing some of year 2019
-    # interfere in the internal affairs missing some of year 1987
-    # intervene in the internal affairs missing some of year 1971
-
     keywords = [
         "non-intervention",
         "non-interference",
